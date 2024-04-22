@@ -1,0 +1,27 @@
+@use '../foundation/index' as *;
+@use 'sass:math';
+
+html {
+  scroll-behavior: smooth;
+  font-size: min(math.div(100, 375) * 1vw, 8.125%);
+  @include mq(sm) {
+    font-size: min(math.div(100, 768) * 1vw, 8.125%);
+  }
+  @include mq(md) {
+    font-size: min(math.div(100, 960) * 1vw, 8.125%);
+  }
+  @include mq(lg) {
+    font-size: min(math.div(100, 1280) * 1vw, 8.125%);
+  }
+  @include mq(xl) {
+    font-size: min(math.div(100, 1530) * 1vw, 8.125%);
+  }
+  body {
+    font-family: $font-sans;
+    font-size: 14rem;
+    color: $c-black;
+  }
+}
+
+.l-main {
+}
