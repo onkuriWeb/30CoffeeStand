@@ -891,23 +891,22 @@
   height: clamp(400rem, 60vw, 1100rem);
 }
 .p-front-gallery__item {
-  width: fit-content;
+  height: 100%;
+  width: auto;
+  max-width: unset;
   img {
-    height: 100%;
-    width: auto;
-    max-width: unset;
   }
 }
 .p-front-gallery__item--01 {
   animation: loop 100s -50s linear infinite;
   @include mq(sm) {
-    animation: loop 100s -50s linear infinite;
+    animation: loop 50s -25s linear infinite;
   }
 }
 .p-front-gallery__item--02 {
   animation: loop2 100s linear infinite;
   @include mq(sm) {
-    animation: loop2 100s linear infinite;
+    animation: loop2 50s linear infinite;
   }
 }
 @keyframes loop {
@@ -921,7 +920,7 @@
 
 @keyframes loop2 {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-200%);

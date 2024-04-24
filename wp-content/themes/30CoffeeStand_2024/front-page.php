@@ -270,7 +270,7 @@
 //////////////////////////////// Gallery ////////////////////////////////
 ?>
 <div class="p-front-gallery">
-  <div class="p-front-gallery__item p-front-gallery__item--01"><img src="<?php imgPath(); ?>/page/front/gallery.webp" alt=""></div>
-  <div class="p-front-gallery__item p-front-gallery__item--02"><img src="<?php imgPath(); ?>/page/front/gallery.webp" alt=""></div>
+  <img class="p-front-gallery__item p-front-gallery__item--01" src="<?php imgPath(); ?>/page/front/gallery.webp" alt="">
+  <img class="p-front-gallery__item p-front-gallery__item--02" src="<?php imgPath(); ?>/page/front/gallery.webp" alt="">
 </div>
 <?php get_footer();?>
