@@ -1,0 +1,19 @@
+@use 'color' as *;
+
+// ==============================================
+//    fade in annimation
+// ==============================================
+
+@mixin fadein-is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@mixin js-fadein {
+  opacity: 0;
+  transform: translateY(-40rem);
+  transition: opacity .7s ease-in-out, transform .5s ease-in-out;
+  &.is-active {
+    @include fadein-is-active;
+  }
+}

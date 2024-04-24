@@ -1,3 +1,182 @@
 @use '../../foundation/index' as *;
 @use 'sass:math';
 
+.p-single-header {
+}
+.p-single-header__date {
+  width: min(70vw, 1480rem);
+  margin: 0 auto 1em;
+}
+
+.p-single-content {
+  width: min(85vw, 800rem);
+  margin: 0 auto 60rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 90rem 0 32rem;
+    font-weight: bold;
+  }
+  h1 {
+    line-height: 1.5;
+    position: relative;
+    padding: 0 0 .75em;
+    font-size: clamp(24rem, 6.5vw, 32rem);
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: {
+        top: 1px solid $c-yellow;
+        bottom: 1px solid $c-yellow;
+      };
+      height: 5rem;
+    }
+  }
+  h2 {
+    line-height: 1.5;
+    font-size: clamp(20rem, 5vw, 24rem);
+    background: $c-light-beige;
+    padding: .75em min(7.5vw, 1em);
+    border-radius: 30rem;
+  }
+  h3 {
+    line-height: 1.75;
+    padding: 0 0 1em;
+    position: relative;
+    font-size: clamp(20rem, 5vw, 24rem);
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $c-yellow;
+      height: 5rem;
+      width: 50rem;
+      border-radius: 10rem;
+    }
+  }
+  h4 {
+    line-height: 1.75;
+    padding: 0 0 .75em;
+    font-size: clamp(20rem, 5vw, 24rem);
+    position: relative;
+    padding: 0 0 0 28rem;
+    &:before {
+      content: "";
+      width: 10rem;
+      height: 10rem;
+      background: $c-yellow;
+      border-radius: 10rem;
+      position: absolute;
+      top: calc((1.75em - 10rem) / 2);
+      left: 0;
+    }
+  }
+  h5 {
+    line-height: 1.75;
+    padding: 0 0 .75em;
+    font-size: clamp(18rem, 4vw, 20rem);
+    color: $c-yellow;
+  }
+  h6 {
+    line-height: 1.75;
+    padding: 0 0 .75em;
+    font-size: clamp(18rem, 4vw, 20rem);
+  }
+  p,
+  li,
+  th,
+  td  {
+    line-height: 2;
+  }
+  p {
+    margin: 0 0 1.5em;
+  }
+  ol,
+  ul {
+    padding: 0 0 0 1.5em;
+  }
+  li {
+    margin: 0 0 .5em;
+  }
+  picture,
+  img {
+    margin: 0 auto 2em;
+  }
+  bold,
+  strong {
+    background: linear-gradient(transparent 65%, $c-yellow 35%);
+  }
+}
+
+.p-single-button {
+  display: block;
+  width: 240rem;
+  padding: 25rem 60rem 25rem 95rem;
+  background: $c-yellow;
+  font-weight: bold;
+  font-size: 18rem;
+  color: $c-black;
+  position: relative;
+  margin: 0 auto;
+  @include mq(sm) {
+    font-size: 20rem;
+  }
+  &:hover {
+    &:after {
+      @include mq(md) {
+        left: 18rem;
+      }
+    }
+    .p-single-button__text {
+      @include mq(md) {
+        transform: translateY(-1em);
+      }
+    }
+    .p-single-button__text--01 {
+      @include mq(md) {
+        opacity: 0;
+      }
+    }
+    .p-single-button__text--02 {
+      @include mq(md) {
+        opacity: 1;
+      }
+    }
+  }
+  &:after {
+    content: "";
+    width: 16rem;
+    height: 15rem;
+    background: url(../img/common/arrow.svg) no-repeat center right / contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(.5turn);
+    left: 24rem;
+    transition: .2s ease-in-out;
+  }
+}
+.p-single-button__inner {
+  display: block;
+  overflow: hidden;
+  width: 5em;
+  height: 1.1em;
+}
+.p-single-button__text {
+  display: block;
+  transform: translateY(0);
+  transition: .3s ease-in-out;
+}
+.p-single-button__text--01 {
+  opacity: 1;
+}
+.p-single-button__text--02 {
+  opacity: 0;
+}

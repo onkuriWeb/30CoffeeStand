@@ -26,6 +26,15 @@ $mq-breakpoints: (
 //    layout
 // ==============================================
 
+// content-width
+@mixin content-width {
+  width: min(85vw, 1680rem);
+  margin: {
+    left: auto;
+    right: auto;
+  };
+}
+
 // object-fit
 @mixin object-cover {
   object-fit: cover;

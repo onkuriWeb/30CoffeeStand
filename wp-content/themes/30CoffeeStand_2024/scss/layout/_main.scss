@@ -2,23 +2,29 @@
 @use 'sass:math';
 
 html {
-  scroll-behavior: smooth;
-  font-size: min(math.div(100, 375) * 1vw, 8.125%);
+  font-size: 6%;
+  @include mq(xxs) {
+    font-size: min(math.div(100, 375) * 1vw, 6%);
+  }
+  @include mq(xs) {
+    font-size: min(math.div(100, 550) * 1vw, 6%);
+  }
   @include mq(sm) {
-    font-size: min(math.div(100, 768) * 1vw, 8.125%);
+    font-size: min(math.div(100, 768) * 1vw, 6%);
   }
   @include mq(md) {
-    font-size: min(math.div(100, 960) * 1vw, 8.125%);
+    font-size: min(math.div(100, 960) * 1vw, 6%);
   }
   @include mq(lg) {
-    font-size: min(math.div(100, 1280) * 1vw, 8.125%);
+    font-size: min(math.div(100, 1280) * 1vw, 6%);
   }
   @include mq(xl) {
-    font-size: min(math.div(100, 1530) * 1vw, 8.125%);
+    font-size: min(math.div(100, 1530) * 1vw, 6%);
   }
   body {
     font-family: $font-sans;
-    font-size: 14rem;
+    font-weight: 500;
+    font-size: 16rem;
     color: $c-black;
   }
 }

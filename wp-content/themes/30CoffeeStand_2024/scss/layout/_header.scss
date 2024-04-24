@@ -1,3 +1,205 @@
 @use '../foundation/index' as *;
 @use 'sass:math';
 
+.l-header {
+}
+.l-header--front {
+  @include mq(md) {
+    transition: .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.is-display {
+    @include mq(md) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.l-header__logo {
+  z-index: 999;
+  width: clamp(80rem, 32vw, 140rem);
+  position: absolute;
+  top: min(7.5vw, 20rem);
+  left: 5vw;
+  @include mq(md) {
+    position: fixed;
+    top: min(7.5vw, 20rem);
+    left: min(5vw, 56rem);
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.l-header__button {
+  z-index: 9999;
+  @include mq(md) {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  @include mq(md, max) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 30rem;
+    width: 72rem;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $c-white;
+    transition: .25s ease-in-out;
+  }
+  &.is-open {
+    background: transparent;
+    .l-header__button-line {
+      background: transparent;
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+.l-header__button-line {
+  @include mq(md, max) {
+    display: block;
+    width: 25rem;
+    height: 2px;
+    background: $c-black;
+    position: relative;
+    transition: .25s ease-in-out;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 25rem;
+      height: 2px;
+      background: $c-black;
+      position: absolute;
+      left: 0;
+      transition: .3s ease-in-out;
+      transform: rotate(0deg);
+    }
+    &:before {
+      top: -10rem;
+    }
+    &:after {
+      bottom: -10rem;
+    }
+  }
+}
+.l-header__inner {
+  z-index: 999;
+  position: fixed;
+  @include mq(md) {
+    top: min(7.5vw, 32rem);
+    right: min(5vw, 56rem);
+  }
+  @include mq(md, max) {
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background: $c-light-beige;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.is-open {
+    @include mq(md) {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+    @include mq(md, max) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.l-header__inner-logo {
+  z-index: 999;
+  width: clamp(80rem, 32vw, 100rem);
+  position: absolute;
+  top: 7.5vw;
+  left: 7.5vw;
+  @include mq(md) {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.l-header__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+    gap: min(4vw, 72rem);
+  }
+  @include mq(md, max) {
+    flex-direction: column;
+  }
+}
+.l-header__item {
+}
+.l-header__link {
+  display: grid;
+  padding: calc(24rem - .5em) 0;
+  @include mq(md, max) {
+    font-size: 18rem;
+  }
+  &:hover {
+    .l-header__link-inner {
+      @include mq(md) {
+        background: rgba($c-white, 1);
+      }
+    }
+    .l-header__link-text {
+      @include mq(md) {
+        transform: translateY(-1em);
+      }
+    }
+    .l-header__link-text--01 {
+      @include mq(md) {
+        opacity: 0;
+      }
+    }
+    .l-header__link-text--02 {
+      @include mq(md) {
+        opacity: 1;
+      }
+    }
+  }
+}
+.l-header__link-inner {
+  display: block;
+  overflow: hidden;
+  width: fit-content;
+  height: 1.25em;
+  @include mq(md) {
+    background: rgba($c-white, .5);
+    transition: .2s ease-in-out;
+  }
+}
+.l-header__link-text {
+  display: block;
+  transform: translateY(0);
+  transition: .3s ease-in-out;
+}
+.l-header__link-text--01 {
+  opacity: 1;
+}
+.l-header__link-text--02 {
+  opacity: 0;
+}

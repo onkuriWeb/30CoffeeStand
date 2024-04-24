@@ -1,0 +1,35 @@
+@use '../../foundation/index' as *;
+@use 'sass:math';
+
+.c-heading {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20rem, 7vw, 32rem);
+  margin: {
+    bottom: min(15vw, 56rem);
+  };
+}
+.c-heading__text {
+  line-height: 1;
+  font-size: clamp(20rem, 7vw, 32rem);
+}
+.c-heading__en {
+  height: clamp(14rem, 5vw, 20rem);
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.c-heading--center {
+  align-items: center;
+  .c-heading__text {}
+  .c-heading__en {}
+}
+
+.c-heading--white {
+  .c-heading__text {
+    color: $c-light-beige;
+  }
+  .c-heading__en {}
+}

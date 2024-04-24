@@ -1,0 +1,50 @@
+@use '../foundation/index' as *;
+@use 'sass:math';
+
+.l-page-header {
+  @include content-width;
+  margin: {
+    bottom: clamp(60rem, 15vw, 100rem);
+  };
+  padding: clamp(140rem, 40vw, 220rem) 0 0;
+}
+.l-page-header__inner {
+  background: $c-light-beige;
+  border-radius: 40rem;
+  padding: clamp(60rem, 10vw, 80rem) 0;
+}
+.l-page-header__title {
+  width: min(70vw, 1480rem);
+  margin: 0 auto 1em;
+  font-size: clamp(24rem, 6.5vw, 32rem);
+  line-height: 1.75;
+}
+.l-page-header__breadcrumb {
+  width: min(70vw, 1480rem);
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rem;
+}
+.l-page-header__breadcrumb-item {
+  color: $c-beige;
+  a {
+    color: $c-beige;
+    text-decoration: underline;
+  }
+  &:not(:last-of-type) {
+    display: flex;
+    gap: 20rem;
+    align-items: center;
+    &:after {
+      content: "";
+      display: block;
+      border: {
+        left: 8rem solid;
+        top: 5rem solid transparent;
+        bottom: 5rem solid transparent;
+      };
+    }
+  }
+}

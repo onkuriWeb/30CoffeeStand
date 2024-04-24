@@ -1,0 +1,127 @@
+@use '../../foundation/index' as *;
+@use 'sass:math';
+
+.p-archive-list {
+  width: min(85vw, 1000rem);
+  margin: 0 auto;
+}
+.p-archive-list__list {
+  list-style: none;
+  @include mq(lg, max) {
+    margin: 0 0 min(15vw, 56rem);
+  }
+}
+.p-archive-list__item {
+  border: {
+    bottom: 1px solid $c-beige;
+  };
+}
+.p-archive-list__link {
+  display: block;
+  padding: min(7.5vw, 28rem) 0;
+  @include mq(sm) {
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    transition: .5s ease-in-out;
+  }
+  @include mq(md) {
+    position: relative;
+  }
+  &:after {
+    @include mq(md) {
+      content: "";
+      width: 14rem;
+      aspect-ratio: 16 / 15;
+      position: absolute;
+      top: 50%;
+      right: 5rem;
+      transform: translateY(-50%);
+      background: url(../img/common/arrow.svg) no-repeat center right / contain;
+      opacity: 0;
+      transition: .4s ease-in-out;
+    }
+  }
+  &:hover {
+    @include mq(md) {
+      gap: 5rem;
+      &:after {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
+.p-archive-list__date {
+  line-height: 1.75;
+  @include mq(sm) {
+    width: 100rem;
+  }
+  @include mq(sm, max) {
+    display: block;
+    margin: 0 0 10rem;
+  }
+}
+.p-archive-list__title {
+  line-height: 1.75;
+  @include mq(sm) {
+    flex: 1;
+  }
+  @include mq(sm, max) {
+    display: block;
+  }
+}
+.p-archive-list__empty {
+  padding: min(7.5vw, 28rem) 0 0;
+  line-height: 1.75;
+}
+
+.p-archive-pagination {
+  padding: 60rem 0 0;
+  font-size: 18rem;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+    justify-content: center;
+    li {
+      span,
+      a {
+        font-size: 24rem;
+        line-height: 100%;
+        padding: 0 5rem;
+      }
+    }
+  }
+}
+.p-archive-pagination__arrow {
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $c-light-beige;
+  border-radius: 20rem;
+  position: relative;
+  transition: .25s ease-in-out;
+}
+.p-archive-pagination__arrow--prev {
+  left: 0;
+  img {
+    transform: rotate(.5turn);
+  }
+  &:hover {
+    @include mq(md) {
+      left: -6rem;
+    }
+  }
+}
+.p-archive-pagination__arrow--next {
+  right: 0;
+  &:hover {
+    @include mq(md) {
+      right: -6rem;
+    }
+  }
+}

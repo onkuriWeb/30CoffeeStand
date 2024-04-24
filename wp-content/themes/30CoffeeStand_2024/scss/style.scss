@@ -2,10 +2,12 @@
 @use 'layout/header';
 @use 'layout/main';
 @use 'layout/footer';
+@use 'layout/page-header';
 
 // object
 // -- component
-@use 'object/component/button';
+@use 'object/component/heading';
 // -- project
 @use 'object/project/front-page';
+@use 'object/project/archive';
 @use 'object/project/single';
