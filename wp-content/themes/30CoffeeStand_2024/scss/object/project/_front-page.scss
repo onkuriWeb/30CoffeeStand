@@ -335,7 +335,7 @@
     position: sticky;
     top: min(15vw, 250rem);
     z-index: 1;
-    padding: min(15vw, 90rem) 0 min(15vw, 90rem) max(5vw, 50vw - 840rem);
+    padding: min(15vw, 90rem) 0 min(15vw, 90rem) clamp(7.5vw,50vw - 840rem, 7.5vw);
   }
   @include mq(md, max) {
     margin: 0 7.5vw min(15vw, 40rem);
