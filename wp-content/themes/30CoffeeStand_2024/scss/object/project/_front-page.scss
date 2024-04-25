@@ -533,6 +533,11 @@
 }
 .p-front-menu__image {
   margin: 0 0 10rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  * {
+    @include object-cover;
+  }
 }
 .p-front-menu__name {
   line-height: 1.5;
