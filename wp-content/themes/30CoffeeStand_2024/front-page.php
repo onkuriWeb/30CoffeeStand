@@ -215,11 +215,11 @@
     <p class="p-front-access__intro"><span class="p-front-access__intro-min">@30 coffee stand は<br>2023年8月にオープンした、<wbr>テイクアウト型の</span><span class="p-front-access__intro--bold">夜コーヒー専門店</span>です。</p>
     <dl class="p-front-access__info">
       <dt class="p-front-access__term">営業時間</dt>
-      <dt class="p-front-access__description">19:00 ~ 24:00</dt>
+      <dd class="p-front-access__description">19:00 ~ 24:00</dd>
       <dt class="p-front-access__term">定休日</dt>
-      <dt class="p-front-access__description">毎週日曜日<br>臨時休業などについては、<a href="https://www.instagram.com/30.coffee.stand/" target="_blank">Instagram</a>の情報をご覧ください</dt>
+      <dd class="p-front-access__description">毎週日曜日<br>臨時休業などについては、<a href="https://www.instagram.com/30.coffee.stand/" target="_blank">Instagram</a>の情報をご覧ください</dd>
       <dt class="p-front-access__term">住所</dt>
-      <dt class="p-front-access__description p-front-access__description--address">福岡県飯塚市本町5-4<a class="p-front-access__to-map" href="https://maps.app.goo.gl/6tJvJTdYCoqeHcpS7" target="_blank">Googleマップで見る</a></dt>
+      <dd class="p-front-access__description p-front-access__description--address">福岡県飯塚市本町5-4<a class="p-front-access__to-map" href="https://maps.app.goo.gl/6tJvJTdYCoqeHcpS7" target="_blank">Googleマップで見る</a></dd>
     </dl>
     <div class="p-front-access__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.7426853820418!2d130.68700923956865!3d33.639250182357515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35417e3a17a89a7d%3A0xb17721c2d55030ed!2z44CSODIwLTAwNDIg56aP5bKh55yM6aOv5aGa5biC5pys55S677yV4oiS77yU!5e0!3m2!1sja!2sjp!4v1713850500507!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -247,11 +247,11 @@
       <p class="p-front-goods__intro">タンブラーを持参いただくと、全商品が<span class="p-front-goods__intro-bold">¥50引き</span>となります。</p>
       <dl class="p-front-goods__info">
         <dt class="p-front-goods__term">容量</dt>
-        <dt class="p-front-goods__description">480ml</dt>
+        <dd class="p-front-goods__description">480ml</dd>
         <dt class="p-front-goods__term">サイズ</dt>
-        <dt class="p-front-goods__description">Φ92×H176mm</dt>
+        <dd class="p-front-goods__description">Φ92×H176mm</dd>
         <dt class="p-front-goods__term">材質</dt>
-        <dt class="p-front-goods__description">PP、バンブーファイバー　他</dt>
+        <dd class="p-front-goods__description">PP、バンブーファイバー　他</dd>
       </dl>
       <a class="p-front-goods__button" href="https://shop.30-coffee-stand.com/2024/02/09/01/" target="_blank"><span class="p-front-goods__button-inner"><span class="p-front-goods__button-text p-front-goods__button-text--01">購入する</span><span class="p-front-goods__button-text p-front-goods__button-text--02">購入する</span></span></a>
     </div>

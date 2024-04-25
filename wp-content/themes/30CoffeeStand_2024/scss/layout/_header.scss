@@ -154,17 +154,14 @@
 .l-header__item {
 }
 .l-header__link {
+  $link: &;
+
   display: grid;
   padding: calc(24rem - .5em) 0;
   @include mq(md, max) {
     font-size: 18rem;
   }
   &:hover {
-    .l-header__link-inner {
-      @include mq(md) {
-        background: rgba($c-white, 1);
-      }
-    }
     .l-header__link-text {
       @include mq(md) {
         transform: translateY(-1em);
@@ -188,7 +185,7 @@
   width: fit-content;
   height: 1.25em;
   @include mq(md) {
-    background: rgba($c-white, .5);
+    background: $c-white;
     transition: .2s ease-in-out;
   }
 }
